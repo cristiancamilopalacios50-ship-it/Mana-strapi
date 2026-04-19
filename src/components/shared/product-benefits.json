@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_product_benefits",
+  "info": {
+    "displayName": "Beneficios de productos"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icons",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_composition_products",
+  "info": {
+    "displayName": "Composicion de productos"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "composition": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

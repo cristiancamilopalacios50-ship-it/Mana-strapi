@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Todos los productos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "products"
+    },
+    "productFeatured": {
+      "type": "enumeration",
+      "required": false,
+      "enum": [
+        "destacado"
+      ]
+    },
+    "sku": {
+      "type": "uid",
+      "required": true
+    },
+    "expire": {
+      "type": "boolean",
+      "default": false
+    },
+    "laboratory": {
+      "type": "enumeration",
+      "enum": [
+        "Pharma"
+      ]
+    },
+    "buttonProduct": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.button",
+        "shared.icons"
+      ]
+    },
+    "titleBenefits": {
+      "type": "text"
+    },
+    "descBenefits": {
+      "type": "text"
+    },
+    "descFormulation": {
+      "type": "richtext"
+    },
+    "titleFormulation": {
+      "type": "string"
+    },
+    "presentationAndPrice": {
+      "type": "component",
+      "component": "shared.product-price",
+      "repeatable": true
+    },
+    "compositionProd": {
+      "type": "component",
+      "component": "shared.composition-product",
+      "repeatable": true
+    },
+    "titleConsume": {
+      "type": "string"
+    },
+    "imageConsume": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "consumeProd": {
+      "type": "component",
+      "component": "shared.consumo-del-producto",
+      "repeatable": true
+    }
+  }
+}

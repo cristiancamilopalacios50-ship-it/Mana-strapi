@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_product_prices",
+  "info": {
+    "displayName": "Precio y presentación"
+  },
+  "options": {},
+  "attributes": {
+    "price": {
+      "type": "integer"
+    },
+    "presentation": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "default": "Maná de vida"
+    },
+    "Subtitulo": {
+      "type": "string",
+      "default": "cambia tu vida con nuestros suplementos naturales, diseñados para mejorar tu bienestar y vitalidad. Descubre cómo nuestros productos pueden ayudarte a alcanzar una vida más saludable y equilibrada."
+    },
+    "Imagen": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}
