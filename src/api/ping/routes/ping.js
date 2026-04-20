@@ -1,9 +1,14 @@
-module.exports = {
+export default {
   routes: [
     {
       method: 'GET',
       path: '/ping',
-      handler: () => 'ok',
+      handler: (ctx) => {
+        ctx.body = 'ok';
+      },
+      config: {
+        auth: false,
+      },
     },
   ],
 };
