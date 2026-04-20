@@ -595,10 +595,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text;
     descriptionShort: Schema.Attribute.String;
     icons: Schema.Attribute.DynamicZone<['shared.icons']>;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    image: Schema.Attribute.Component<'shared.image', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -705,7 +702,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Imagen: Schema.Attribute.Media<'images' | 'files', true>;
+    image: Schema.Attribute.Component<'shared.image', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
@@ -753,8 +750,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     descFormulation: Schema.Attribute.RichText;
     description: Schema.Attribute.RichText;
     expire: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    image: Schema.Attribute.Media<'images' | 'files', true>;
-    imageConsume: Schema.Attribute.Media<'images' | 'files', true>;
+    image: Schema.Attribute.Component<'shared.image', false>;
+    imageConsume: Schema.Attribute.Component<'shared.image', false>;
     laboratory: Schema.Attribute.Enumeration<['Pharma']>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -772,6 +769,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     title: Schema.Attribute.String;
     titleBenefits: Schema.Attribute.Text;
     titleConsume: Schema.Attribute.String;
+    titleFeature: Schema.Attribute.String;
     titleFormulation: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

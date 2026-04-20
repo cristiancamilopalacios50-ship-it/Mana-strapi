@@ -14,14 +14,6 @@
     "title": {
       "type": "string"
     },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
     "description": {
       "type": "richtext"
     },
@@ -84,18 +76,33 @@
     "titleConsume": {
       "type": "string"
     },
-    "imageConsume": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
     "consumeProd": {
       "type": "component",
       "component": "shared.consumo-del-producto",
       "repeatable": true
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "imageConsume": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "titleFeature": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "productFeatured"
+            },
+            "destacado"
+          ]
+        }
+      }
     }
   }
 }

@@ -21,16 +21,6 @@
     "description": {
       "type": "text"
     },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "products": {
       "type": "relation",
       "relation": "manyToMany",
@@ -45,6 +35,11 @@
     },
     "descriptionShort": {
       "type": "string"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
     }
   }
 }

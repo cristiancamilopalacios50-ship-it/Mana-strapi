@@ -221,6 +221,17 @@ export interface SharedIcons extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_images';
+  info: {
+    displayName: 'image';
+  };
+  attributes: {
+    alternativeText: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -313,6 +324,7 @@ declare module '@strapi/strapi' {
       'shared.composition-product': SharedCompositionProduct;
       'shared.consumo-del-producto': SharedConsumoDelProducto;
       'shared.icons': SharedIcons;
+      'shared.image': SharedImage;
       'shared.media': SharedMedia;
       'shared.product-benefits': SharedProductBenefits;
       'shared.product-price': SharedProductPrice;
