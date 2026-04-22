@@ -216,6 +216,9 @@ export interface SharedIcons extends Struct.ComponentSchema {
         'wind',
         'wine',
         'zap',
+        'rule',
+        'rose',
+        'laugh',
       ]
     >;
   };

@@ -103,6 +103,9 @@
           ]
         }
       }
+    },
+    "shortDescription": {
+      "type": "text"
     }
   }
 }

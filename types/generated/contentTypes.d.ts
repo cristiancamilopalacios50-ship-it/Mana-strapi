@@ -661,7 +661,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     defaultSeo: Schema.Attribute.Component<'shared.seo', false>;
     email: Schema.Attribute.String;
     facebook: Schema.Attribute.String;
-    favicon: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    favicon: Schema.Attribute.Component<'shared.image', false>;
     fieldText: Schema.Attribute.RichText &
       Schema.Attribute.DefaultTo<'Selecciona la prensetacion y pregunta por el bot\u00F3n de'>;
     instagram: Schema.Attribute.String;
@@ -683,6 +683,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    urlSite: Schema.Attribute.String;
     whatsappBtnText: Schema.Attribute.String;
     whatsappNumber: Schema.Attribute.String;
   };
@@ -765,6 +766,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     >;
     productFeatured: Schema.Attribute.Enumeration<['destacado']>;
     publishedAt: Schema.Attribute.DateTime;
+    shortDescription: Schema.Attribute.Text;
     sku: Schema.Attribute.UID & Schema.Attribute.Required;
     title: Schema.Attribute.String;
     titleBenefits: Schema.Attribute.Text;
