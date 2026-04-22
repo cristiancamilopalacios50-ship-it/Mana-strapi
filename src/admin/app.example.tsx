@@ -30,12 +30,7 @@ export default {
       // 'zh-Hans',
       // 'zh',
     ],
-       translations: {
-      es: {
-        'content-manager.content-types.api::product.product.fields.title':
-          'Título de producto'
-      },
-    },
+
   },
   bootstrap(app: StrapiApp) {
     console.log(app);
