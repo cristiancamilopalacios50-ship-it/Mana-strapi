@@ -736,6 +736,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::category.category'
     >;
+    colorProduct: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     compositionProd: Schema.Attribute.Component<
       'shared.composition-product',
       true

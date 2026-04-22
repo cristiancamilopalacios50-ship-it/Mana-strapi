@@ -6,106 +6,10 @@ export interface SharedButton extends Struct.ComponentSchema {
     displayName: 'botones';
   };
   attributes: {
-    colorButton: Schema.Attribute.Enumeration<
-      [
-        'on-primary-container',
-        'on-secondary-fixed',
-        'primary-fixed',
-        'on-secondary-container',
-        'primary-fixed-dim',
-        'on-secondary-fixed-variant',
-        'error',
-        'primary-container',
-        'background',
-        'inverse-surface',
-        'outline-variant',
-        'on-error-container',
-        'surface-container-high',
-        'outline',
-        'inverse-on-surface',
-        'primary',
-        'on-primary',
-        'surface-container-lowest',
-        'on-surface-variant',
-        'tertiary-fixed',
-        'tertiary-fixed-dim',
-        'on-tertiary-fixed',
-        'on-tertiary-container',
-        'on-background',
-        'error-container',
-        'on-tertiary-fixed-variant',
-        'on-tertiary',
-        'on-surface',
-        'tertiary',
-        'surface-dim',
-        'on-primary-fixed-variant',
-        'surface-bright',
-        'secondary',
-        'secondary-fixed',
-        'surface-container-highest',
-        'surface',
-        'on-error',
-        'inverse-primary',
-        'surface-variant',
-        'surface-container',
-        'on-primary-fixed',
-        'secondary-container',
-        'tertiary-container',
-        'surface-tint',
-        'secondary-fixed-dim',
-        'surface-container-low',
-      ]
-    >;
-    colorText: Schema.Attribute.Enumeration<
-      [
-        'on-primary-container',
-        'on-secondary-fixed',
-        'primary-fixed',
-        'on-secondary-container',
-        'primary-fixed-dim',
-        'on-secondary-fixed-variant',
-        'error',
-        'primary-container',
-        'background',
-        'inverse-surface',
-        'outline-variant',
-        'on-error-container',
-        'surface-container-high',
-        'outline',
-        'inverse-on-surface',
-        'primary',
-        'on-primary',
-        'surface-container-lowest',
-        'on-surface-variant',
-        'tertiary-fixed',
-        'tertiary-fixed-dim',
-        'on-tertiary-fixed',
-        'on-tertiary-container',
-        'on-background',
-        'error-container',
-        'on-tertiary-fixed-variant',
-        'on-tertiary',
-        'on-surface',
-        'tertiary',
-        'surface-dim',
-        'on-primary-fixed-variant',
-        'surface-bright',
-        'secondary',
-        'secondary-fixed',
-        'surface-container-highest',
-        'surface',
-        'on-error',
-        'inverse-primary',
-        'surface-variant',
-        'surface-container',
-        'on-primary-fixed',
-        'secondary-container',
-        'tertiary-container',
-        'surface-tint',
-        'secondary-fixed-dim',
-        'surface-container-low',
-      ]
-    >;
+    colorButton: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
+    colorText: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     name: Schema.Attribute.String;
   };
 }
@@ -219,6 +123,7 @@ export interface SharedIcons extends Struct.ComponentSchema {
         'rule',
         'rose',
         'laugh',
+        'bone',
       ]
     >;
   };
