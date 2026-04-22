@@ -112,6 +112,11 @@
       "customField": "plugin::color-picker.color",
       "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
       "required": true
+    },
+    "benefits": {
+      "type": "component",
+      "component": "shared.product-benefits",
+      "repeatable": true
     }
   }
 }
