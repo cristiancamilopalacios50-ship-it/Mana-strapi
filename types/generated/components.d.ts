@@ -198,6 +198,17 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSaborDeProducto extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sabor_de_productos';
+  info: {
+    displayName: 'Sabor de producto';
+  };
+  attributes: {
+    icon: Schema.Attribute.Component<'shared.icons', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -238,6 +249,7 @@ declare module '@strapi/strapi' {
       'shared.product-price': SharedProductPrice;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
+      'shared.sabor-de-producto': SharedSaborDeProducto;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
     }

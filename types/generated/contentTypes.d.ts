@@ -609,6 +609,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     defaultSeo: Schema.Attribute.Component<'shared.seo', false>;
+    descriptionCategoriesHome: Schema.Attribute.Text;
     email: Schema.Attribute.String;
     facebook: Schema.Attribute.String;
     favicon: Schema.Attribute.Component<'shared.image', false>;
@@ -628,6 +629,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Man\u00E1 de vida'>;
     subjectSocialMedia: Schema.Attribute.String;
+    titleCategoriesHome: Schema.Attribute.String;
     tyc: Schema.Attribute.RichText;
     ubication: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -705,6 +707,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     descFormulation: Schema.Attribute.RichText;
     description: Schema.Attribute.RichText;
     expire: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    flavours: Schema.Attribute.Component<'shared.sabor-de-producto', true>;
     image: Schema.Attribute.Component<'shared.image', false>;
     imageConsume: Schema.Attribute.Component<'shared.image', false>;
     laboratory: Schema.Attribute.Enumeration<['Pharma']>;
@@ -720,6 +723,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     >;
     productFeatured: Schema.Attribute.Enumeration<['destacado']>;
     publishedAt: Schema.Attribute.DateTime;
+    registerInvima: Schema.Attribute.String;
     shortDescription: Schema.Attribute.Text;
     sku: Schema.Attribute.UID & Schema.Attribute.Required;
     title: Schema.Attribute.String;

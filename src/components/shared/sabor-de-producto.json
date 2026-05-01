@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_sabor_de_productos",
+  "info": {
+    "displayName": "Sabor de producto"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.icons",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

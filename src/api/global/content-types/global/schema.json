@@ -73,6 +73,12 @@
     },
     "urlSite": {
       "type": "string"
+    },
+    "titleCategoriesHome": {
+      "type": "string"
+    },
+    "descriptionCategoriesHome": {
+      "type": "text"
     }
   }
 }
