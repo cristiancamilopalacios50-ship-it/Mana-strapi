@@ -171,6 +171,10 @@ export interface SharedProductPrice extends Struct.ComponentSchema {
   attributes: {
     presentation: Schema.Attribute.String;
     price: Schema.Attribute.Integer;
+    shippingMode: Schema.Attribute.Enumeration<['block', 'linear']> &
+      Schema.Attribute.Required;
+    unitsPerBlock: Schema.Attribute.Integer;
+    weight: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 

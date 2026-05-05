@@ -1,5 +1,0 @@
-/**
- * ping service
- */
-
-export default () => ({});

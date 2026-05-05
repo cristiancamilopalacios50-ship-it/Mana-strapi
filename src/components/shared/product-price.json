@@ -10,6 +10,22 @@
     },
     "presentation": {
       "type": "string"
+    },
+    "weight": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\d+(\\.\\d+)?$"
+    },
+    "shippingMode": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "block",
+        "linear"
+      ]
+    },
+    "unitsPerBlock": {
+      "type": "integer"
     }
   },
   "config": {}
